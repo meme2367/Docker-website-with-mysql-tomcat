@@ -1,4 +1,11 @@
-omcat folder - docker file
+deploying java web with docker container
+========================================
+
+## architecture
+
+![architecture](https://i.stack.imgur.com/4Av3X.png)
+
+## tomcat folder - docker file
 
 FROM tomcat:latest
 RUN mkdir -p /usr/local/tomcat/webapps/test/
@@ -8,7 +15,7 @@ COPY ./web.xml /usr/local/tomcat/webapps/test
 CMD ["catalina.sh", "run"]
 tomcat folder - db.jsp
 
-mysql folder - dockerfile
+## mysql folder - dockerfile
 
 FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=".."
@@ -18,7 +25,7 @@ ENV MYSQL_PASSWORD=".."
 EXPOSE 3306
 tomcat folder - mysql-connector-java-5.1.44-bin.jar
 
-tomcat folder - web.xml
+## tomcat folder - web.xml
 
 <web-app></web-app>
 
