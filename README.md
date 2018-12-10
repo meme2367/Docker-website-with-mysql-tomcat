@@ -42,3 +42,4 @@ docker run -dit --link mysql1:my-mysql --name myTomcat1 -p 8888:8080 my-tomcat
 
 get access to http://localhost:8888/test/db.jsp
 
++ https://stackoverflow.com/questions/53700678/connect-tomcat-and-mysql-in-docker-container-with-jdbc-driver
