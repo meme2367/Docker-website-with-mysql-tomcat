@@ -35,9 +35,8 @@ webapps폴더의 하위폴더에 jsp비롯 웹과 관련된 코드 넣음.
 <web-app></web-app>
 
 run by: 
-
-  docker build -t my-mysql .
-  docker run -dit --name mysql1 -p 3306:3306 my-mysql
+        docker build -t my-mysql .
+        docker run -dit --name mysql1 -p 3306:3306 my-mysql\`
 
 and input datadase using mysql workbench(i granted a privileges and checked the data at docker mysql bash.)
 
