@@ -41,7 +41,7 @@ MEMBER 테이블의 내용
         // 5. 쿼리 실행 결과 출력
          while (rs.next()) {
                 String sqlRecipeProcess = rs.getString("id");
-                String sqlRecipeProcess = rs.getString("name");
+                String sqlRecipeProcess2 = rs.getString("name");
         }
 
 
