@@ -7,7 +7,8 @@ deploying java web with docker container
 
 ## organize your working directory like this:
 ```
-docker/
+mysql/
+    Dockerfile
 ```
 ```
 tomcat/
@@ -23,12 +24,9 @@ tomcat/
 
 ## tomcat folder - docker file
 ```
-  FROM tomcat:latest
-  RUN mkdir -p /usr/local/tomcat/webapps/test/
-  COPY ./mysql-connector-java-5.1.44-bin.jar /usr/local/tomcat/webapps/test
-  COPY ./db.jsp /usr/local/tomcat/webapps/test 
-  COPY ./web.xml /usr/local/tomcat/webapps/test
-  CMD ["catalina.sh", "run"]
+    FROM tomcat:latest
+    ADD ./webapp /usr/local/tomcat/webapps/webapp/
+    CMD ["catalina.sh", "run"]
 ```
 webapps폴더의 하위폴더에 jsp비롯 웹과 관련된 코드 넣음.
 
@@ -39,12 +37,12 @@ webapps폴더의 하위폴더에 jsp비롯 웹과 관련된 코드 넣음.
 
 ## mysql folder - dockerfile
 ```
-  FROM mysql:5.7
-  ENV MYSQL_ROOT_PASSWORD="welcome1"
-  ENV MYSQL_DATABASE="test"
-  ENV MYSQL_USER="root" 
-  ENV MYSQL_PASSWORD="welcome1"
-  EXPOSE 3306
+    FROM mysql:5.7
+    ENV MYSQL_ROOT_PASSWORD="welcome1"
+    ENV MYSQL_DATABASE="dku"
+    ENV MYSQL_USER="root"
+    ENV MYSQL_PASSWORD="welcome1"
+    EXPOSE 3306
 ```  
 ## tomcat folder - web.xml
 
