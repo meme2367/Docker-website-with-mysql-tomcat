@@ -5,6 +5,22 @@ deploying java web with docker container
 
 ![architecture](https://i.stack.imgur.com/4Av3X.png)
 
+## organize your working directory like this:
+```
+docker/
+```
+```
+tomcat/
+    Dockerfile
+    webapp/
+        WEB-INF/
+          classes/
+          lib/mysql-connector-java-5.1.44-bin.jar
+          web.xml
+        db.jsp
+```
++ web-inf/lib/설정해야 jdbc driver 제대로 작동됨.
+
 ## tomcat folder - docker file
 ```
   FROM tomcat:latest
@@ -24,10 +40,10 @@ webapps폴더의 하위폴더에 jsp비롯 웹과 관련된 코드 넣음.
 ## mysql folder - dockerfile
 ```
   FROM mysql:5.7
-  ENV MYSQL_ROOT_PASSWORD=".."
+  ENV MYSQL_ROOT_PASSWORD="welcome1"
   ENV MYSQL_DATABASE="test"
-  ENV MYSQL_USER="dku" 
-  ENV MYSQL_PASSWORD=".."
+  ENV MYSQL_USER="root" 
+  ENV MYSQL_PASSWORD="welcome1"
   EXPOSE 3306
 ```  
 ## tomcat folder - web.xml
@@ -44,7 +60,7 @@ and input datadase using mysql workbench(i granted a privileges and checked the 
 run by :
 ```
   docker build -t my-tomcat .
-  docker run -dit --link mysql1:my-mysql --name myTomcat1 -p 80:8080 my-tomcat
+  docker run -dit --link mysql1:my-mysql --name myTomcat1 -p 8888:8080 my-tomcat
 ```  
   
 ### mysql bash || workbench
