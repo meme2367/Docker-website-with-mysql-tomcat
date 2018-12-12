@@ -79,7 +79,7 @@ run by :
   flush privileges;
   quit;
 ```  
-get access to http://localhost:8080/test/db.jsp
+get access to http://localhost:8888/webapp/db.jsp
 (톰캣의 기본 포트번호 8080, 웹서버 기본 포트번호 80)
 
 + https://stackoverflow.com/questions/53700678/connect-tomcat-and-mysql-in-docker-container-with-jdbc-driver
