@@ -22,9 +22,8 @@ MEMBER 테이블의 내용
     
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        String jdbcdriver = "jdbc:mysql://mysql1:3306/dku"+
-				"useUnicode=true&characterEncoding=utf8";
-        String db_user = "dku";
+        String jdbcdriver = "jdbc:mysql://mysql1:3306/dku";
+        String db_user = "root";
         String db_pass = "welcome1";
         
         String query = "select * from test";
