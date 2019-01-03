@@ -1,3 +1,3 @@
 FROM tomcat:latest
-ADD ./webapp /usr/local/tomcat/webapps/webapp/
+ADD ./board /usr/local/tomcat/webapps/board/
 CMD ["catalina.sh", "run"]
