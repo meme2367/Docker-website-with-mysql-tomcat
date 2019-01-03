@@ -91,8 +91,8 @@ run by :
 ```  
   create database board default character set utf8;
   
-  create user 'dku'@'localhost' identified by 'welcome1';
-  create user 'dku'@'%' identified by 'welcome1';
+  create user 'dku'@'localhost' identified by '...';
+  create user 'dku'@'%' identified by '...';
 
   grant all privileges on board.* to 'dku'@'localhost';
   grant all privileges on board.* to 'dku'@'%';
