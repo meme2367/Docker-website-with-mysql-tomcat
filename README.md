@@ -1,6 +1,10 @@
 java member-board web with docker container
 ========================================
+![이미지](https://user-images.githubusercontent.com/29730565/110429241-f6bb3300-80ed-11eb-9cf2-b375fabdb909.png)
 
+
+## 아키텍쳐
+![아키텍쳐](https://user-images.githubusercontent.com/29730565/110429270-fe7ad780-80ed-11eb-86b5-082da0a46d9a.png)
 
 ## 회원 관련 기능
 - 회원 가입
